@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입연산자</title>
+    <style>
+        table {
+            /* table이 화면 중앙에 출력 */
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #000;
+            width: 70%;
+        }
+
+        th,
+        td {
+            /* 검정색 실선을 출력 */
+            border: 1px solid #000;
+            /* 글자가 가운데 정렬 */
+            text-align: center;
+        }
+
+        th {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // += -= *= *= /= %=
+        var num1 = 5;
+        var num2 = 15;
+        var num3 = 5;
+        var num4 = 20;
+        var num5 = 10;
+
+        num1 += 10; // 5+10 = 15
+        num2 -= 10; // 15-10 = 5
+        num3 *= 10; // 5*10 = 50
+        num4 /= 10; // 20/10 = 2
+        num5 %= 10; // 10%10 = 0
+
+        console.log(num1 + "," + num2 + "," + num3 + "," + num4 + "," + num5);
+        // += 연산자를 이용한 문자 연결
+
+        var table = '<table>';
+        table += '<tr>';
+        table += '<th>자바스크립트</th><th>제이쿼리</th>';
+        table += '</tr>';
+        table += '<tr>';
+        table += '<td>자바스크립트</td><td>제이쿼리</td>';
+        table += '</tr>';
+        table += '<tr>';
+        table += '<td>국어</td><td>영어</td>';
+        table += '</tr>';
+
+        document.write(table);
+    </script>
+</body>
+
+</html>
