@@ -25,29 +25,38 @@
             총 주문 금액은 : XXX
 
         */
+        // 인원수를 입력받음
+        let count = Number(prompt('인원수를 입력하세요.', 0));
 
-        let clientCount = Number(prompt('인원수를 입력하세요?', 0));
-        let menuId = Number(prompt('1. 짜장면(6000원), 2.짬뽕(8000원), 3.탕수육(18000)원?'));
+        // 메뉴를 입력받음
+        let menuId = Number(prompt('메뉴를 선택하세요(1~3).', ''));
+
+        //결과 변수 선언
         let result = null;
+
+        //조건문 if, elseif, else
         if (menuId == 1) {
-            result = clientCount * 6000;
+            result = count * 6000;
+        } else if (menuId == 2) {
+            result = count * 8000;
+        } else if (menuId == 3) {
+            result = count * 18000;
+
+        } else {
+            result = false;
+
         }
-        else if (menuId == 2) {
-            result = clientCount * 8000;
+
+        //출력
+        if (result) {
+            document.write("총 주문금액은 " + result);
+        } else {
+            document.write("주문 실패");
         }
-        else if (menuId == 3) {
-            3
-            result = clientCount * 18000;
-        }
-        else {
-            result = '주문X';
-        }
-        document.write("총 주문금액은 " + result);
     </script>
 </head>
 
 <body>
-
 </body>
 
 </html>
