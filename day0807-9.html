@@ -8,11 +8,21 @@
     <script>
         var comparison1 = (5 > 2);;
         var comparison2 = (5 < 2);;
-        var comparison3 = (5 == 5);;
+        var comparison3 = (5 == 5);
+
+        /*
+            다른 경우에는 실제값만 비교
+        */
+
         var comparison4 = (5 == '5');;
-        var comparison5 = (5 === 5);;
-        var comparison6 = (5 != '5');;
-        var comparison7 = (5 !== '5');;
+        var comparison5 = (5 === '5');;
+        /*
+            5는 데이터타입이 Number
+            5는 데이터타입이 String
+        */
+        var comparison6 = (5 != '5');; // false
+        var comparison7 = (5 !== '5');; // true
+
         console.log(comparison1);
         console.log(comparison2);
         console.log(comparison3);
