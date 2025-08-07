@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 문</title>
+    <script>
+        /*
+            if (조건식1) {
+                명령문1;
+            }else if (조건식2){
+                명령문2;
+            }else if (조건식3){
+                명령문3;
+            }else{
+                명령문4;
+            }        
+        */
+        // 나이를 입력받아서
+        var age = prompt('age?', '');
+
+        // 변수만 선언
+        var admissionFee = '';
+
+
+        //조건문
+        // 나이가 13세 미만이고 65세이상이면
+        if (age < 13 || age >= 65) {
+            admissionFee = '2,000원';
+
+            // 나이게 13세 이상이고 20세 미만이면
+        } else if (age >= 13 && age < 20) {
+            admissionFee = '4,000원';
+
+            // 그렇지 않으면
+        } else {
+            admissionFee = '6,000원';
+        }
+        //문자열 출력
+        document.write(admissionFee);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

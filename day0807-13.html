@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        /*
+            조건
+            1. prompt, if 명령문 사용
+            prompt를 사용하여
+            
+            <메뉴>
+            1. 짜장면 (6000원)
+            2. 짬뽕 (8000원)
+            3. 탕수육 (18000원)
+
+            메뉴를 입력받는다.
+
+            인원수 입력 : X
+
+            출력 결과
+
+            총 주문 금액은 : XXX
+
+        */
+
+        let clientCount = Number(prompt('인원수를 입력하세요?', 0));
+        let menuId = Number(prompt('1. 짜장면(6000원), 2.짬뽕(8000원), 3.탕수육(18000)원?'));
+        let result = null;
+        if (menuId == 1) {
+            result = clientCount * 6000;
+        }
+        else if (menuId == 2) {
+            result = clientCount * 8000;
+        }
+        else if (menuId == 3) {
+            3
+            result = clientCount * 18000;
+        }
+        else {
+            result = '주문X';
+        }
+        document.write("총 주문금액은 " + result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
