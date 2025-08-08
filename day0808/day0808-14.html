@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+
+        let kor = Number(prompt('국어:', 100));
+        let eng = Number(prompt('영어:', 80));
+        let math = Number(prompt('수학:', 90));
+        
+        // kor, eng, math => 매개변수
+        function avg(kor, eng, math) {
+            let sum = (kor + eng + math);
+            let avg = (sum / 3).toFixed(1);
+            document.write(`평균값: ${avg} <br>`);
+        }
+
+        avg(kor, eng, math);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
