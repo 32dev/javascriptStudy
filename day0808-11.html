@@ -6,14 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <script>
-        //354
+        //p.354
         function compute() {
             let x = 10;
             let y = 100;
             let result = x / y;
-            document.write(result);
+            document.write(result + '<br>');
         }
-        compute();
+
+        function add(num1, num2) {
+            let result = num1 + num2;
+            document.write(`${num1} + ${num2} = ${result}<br>`);
+
+        }
+        function minus(num1, num2) {
+            let result = num1 - num2;
+            document.write(`${num1} - ${num2} = ${result}<br>`);
+        }
+        function mul(num1, num2) {
+            let result = num1 * num2;
+            document.write(`${num1} * ${num2} = ${result}<br>`);
+        }
+
+        function div(num1, num2) {
+            let result = num1 / num2;
+            document.write(`${num1} / ${num2} = ${result}<br>`);
+        }
+        //함수를 부른다
+        // compute();
+
+        /*
+            문제)
+            조건
+            - 뺄셈 함수 선언 : minus( 매개 변수 2개 선언)
+            - 곱셈 함수 선언 : mul( 매개 변수 2개 선언)
+            - 나누기 함수 선언 : div ( 매개 변수 2개 선언)
+        */
+        add(100, 50);
+        minus(100, 50);
+        mul(100, 50);
+        div(100, 50);
     </script>
 </head>
 
