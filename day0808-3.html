@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day0808-3.html</title>
+
+    <script>
+        /*
+        문제) day0808-3.html 생성
+
+        조건
+        1.prompt,switch문을 사용
+        층수입력: 1.카페 2.헬스장 3.독서실  
+        >>2
+        출력결과
+        입력하신 장소는 헬스장입니다.
+        
+        */
+
+        let input = prompt("층수입력 : 1.카페, 2.헬스장 3.독서실" , "");
+        let result;
+        switch (input) {
+            case "1":
+                result = "카페";
+                break;
+            case "2":
+                result = "헬스장";
+                break;
+            case "3":
+                result = "독서실";
+                break;
+            default:
+                result = "없음";
+                break;
+        }
+        document.write("입력하신 장소는 " + result + " 입니다.");
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
