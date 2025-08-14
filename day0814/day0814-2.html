@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>재귀함수</title>
+    <script>
+        function factorial(n) {
+            if (n == 0 || n == 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>factorial 계산</h3>
+    <p>숫자를 입력 : <input type="text" id="number"></p>
+    <button onclick="cal()">계산</button>
+    <p id="result"></p>
+    <script>
+        function cal() {
+            let number = document.getElementById("number").value;
+            let result = document.getElementById("result");
+            result.innerHTML = `계산된 결과 : ${factorial(parseInt(number))}`;
+        }
+    </script>
+</body>
+
+</html>

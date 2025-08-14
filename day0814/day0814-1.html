@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 자바스크립트 코딩하는 태그 -->
+    <title>Document</title>
+    <script>
+        // 변수선언
+        let counter = 0;
+        function inner() {
+            // 변수값을 1을 증가시킴
+            counter++;
+            document.write(counter + "<br>");
+        }
+        inner();
+        counter = 100;
+        inner();
+        // 클로저 함수 작성
+        // 클로저는 변수값을 캡슐화(=정보은닉) 하기 위한 기법
+        function outer() {
+            // 지역변수 접근을 막는다.
+            let counter = 0;
+            function inner() {
+                counter++;
+                document.write(counter + "<br>")
+            }
+            return inner;
+        }
+        const increment = outer();
+        increment();
+        increment();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
