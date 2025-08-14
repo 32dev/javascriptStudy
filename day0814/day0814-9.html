@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Phone {
+            constructor(name, cost) {
+                this.name = name;
+                this.cost = cost;
+            }
+            specInfo() {
+                document.write(`${this.name} 가격은 ${this.cost.toLocaleString()} 입니다.<br>`);
+            }
+        };
+
+        let galaxy = new Phone("갤럭시Z플립", 1800000);
+        let iphone = new Phone("아이폰 11Pro", 1500000);
+        galaxy.specInfo();
+        iphone.specInfo();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

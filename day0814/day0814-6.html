@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 사용 방식</title>
+    <script>
+        /* new Animal();  */
+        function Animal(name, age) {
+            this.name = name;
+            this.age = age;
+            this.animalInfo = function () {
+                return `${this.name}는 ${this.age} 입니다.<br>`;
+            };
+        }
+
+        var dog = new Animal("멍멍이", 5);
+        var cat = new Animal("야옹이", 7);
+
+        document.write(dog.animalInfo());
+        document.write(cat.animalInfo());
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

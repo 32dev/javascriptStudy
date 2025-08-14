@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+
+<body>
+    <script>
+        var score = [10, 20, 30];
+        var array = ['a', 'b', 'c', 'd', 'e'];
+        var array1 = ['f', 'g'];
+        document.write("배열 크기 : " + score.length + "<br>");
+        document.write(array.slice(0, 3) + "<br>");
+        document.write(array.join("/") + "<br>");
+        document.write(array.concat(array1) + "<br>");
+        document.write(array.toString() + "<br><hr>");
+
+        var array2 = [10, 20, 30, 40];
+        document.write(array2 + "<br>");
+        array2.push(50);
+        document.write(array2 + "<br>");
+        array2.pop();
+        document.write("<hr>");
+        document.write(array2.reverse() + "<br>");
+
+        var score = [20, 40, 10, 100, 7];
+        document.write(score + "<br>");
+        score.sort(function (a, b) {
+            return a - b;
+        })
+        document.write(score + "<br>");
+        score.sort(function (a, b) {
+            return b - a;
+        })
+        document.write(score + "<br>");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var flower = {
+            name: '장미',
+            cost: 1500,
+            flowerInfo: function () {
+                var str = null;
+                str = `${this.name} 한송이 가격은 ${this.cost.toLocaleString()} 원 입니다.`;
+                return str;
+            }
+        }
+        document.write(flower.flowerInfo());
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

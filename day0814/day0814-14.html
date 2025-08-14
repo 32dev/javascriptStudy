@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>day0814-14.html</title>
+  <script>
+    class Rectangle {
+      constructor(width, height) {
+        this.width = width;
+        this.height = height;
+      }
+      getArea() {
+        return `가로:${this.width}, 세로:${this.height}인 사각형의 면적은 200${this.width * this.height}입니다.<br/>`;
+      }
+    }
+    var rectangle = new Rectangle(200, 100);
+
+    document.write(rectangle.getArea());
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
