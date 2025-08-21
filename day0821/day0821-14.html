@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <style>
-    </style>
     <script>
         function sum() {
             let kor = Number(frm.kor.value);
@@ -28,31 +25,22 @@
 </head>
 
 <body>
-    <form id="frm" action="#" method="get">
-        <table>
-            <caption>
-                <h1>학생 성적</h1>
-            </caption>
-            <tr>
-                <th>국어</th>
-                <td><input type="text" id="kor" placeholder="국어 점수 입력"></td>
-            </tr>
-            <tr>
-                <th>영어</th>
-                <td><input type="text" id="eng" placeholder="영어 점수 입력"></td>
-            </tr>
-            <tr>
-                <th>수학</th>
-                <td><input type="text" id="math" placeholder="수학 점수 입력"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <button type="button" id="btnSum">총점</button>
-                    <button type="button" id="btnAvg">평균</button>
-                </td>
-            </tr>
-        </table>
+    <form id="frm">
+        <h1>학생 성적</h1>
+        <p>
+            국어
+            <input type="text" id="kor" placeholder="국어 점수 입력">
+        </p>
+        <p>
+            영어
+            <input type="text" id="eng" placeholder="영어 점수 입력">
+        </p>
+        <p>
+            수학
+            <input type="text" id="math" placeholder="수학 점수 입력">
+        </p>
+        <button type="button" id="btnSum">총점</button>
+        <button type="button" id="btnAvg">평균</button>
     </form>
 </body>
 
