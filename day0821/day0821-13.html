@@ -3,20 +3,19 @@
 <!-- html주석  -->
 <!--html 시작-->
 <html lang="en">
-<head><!-- html의 head영역 시작-->
 
-    <meta charset="UTF-8"><!-- 문자열인코딩 UTF-8 -->
-
-    <!--HTML 화면크기 viewport 설정 -->
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인라인 이벤트 모델</title><!-- 파일 제목 -->
+    <!-- 파일 제목 -->
+    <title>인라인 이벤트 모델</title>
     <!-- 자바스크립트 시작-->
     <script>
         // javascript 주석
         // 합계 함수
         function sum(n) { //sum 함수 시작
-            let sum = 0;
             //합계 변수 선언 = 0;
+            let sum = 0;
 
             // 1부터 100까지 더하는 부분
             for (let i = 1; i <= n; i++) {
@@ -27,15 +26,17 @@
             //결과창 띄우기  toLocaleString() => 콤마(천) 단위 출력
             alert(`${sum.toLocaleString()}`); // 문자열로 출력
         } //sum 함수 끝
-    </script><!-- 자바스크립트 끝 -->
-</head><!-- html의 head영역 끝-->
+
+    </script>
+    <!-- 자바스크립트 끝 -->
+</head>
 <!-- html body 영역 시작 -->
 
 <body>
     <!-- onclick => 버튼을 클릭시 이벤트 발생 -->
     <!-- 100 => 매개변수  -->
     <button onclick="sum(100);"> 클릭 </button>
-    <!--button 태그에 인라인이벤트 함수는 버튼을 클릭했을 때 sum함수를 실행합니다-->
+    <!--button 태그에 인라인이벤트 함수 onclick 발생하면 sum함수를 실행합니다-->
 </body>
 <!-- html body 영역 끝 -->
 

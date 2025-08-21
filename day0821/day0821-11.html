@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>day0821-11.html</title>
     <script>
         var sub = new Set();
         sub.add("a");
         sub.add("b");
         sub.add("c");
-        sub.add('a');
+        sub.add("a");
 
         document.write(sub.size + "<br>");
         document.write(sub.has('c') + "<br>");
 
+        // Set 구조에 있는 데이터를 가져와서
+        // 반복문으로 출력
         for (var value of sub.values()) {
             document.write(value + "<br>"); // a b c
         };
+
+        // Set 구조에서 값을 삭제 
         sub.delete('a');
         document.write(sub.has('a') + "<br>"); //false
-        sub.clear();
+        sub.clear(); // Set 구조에서 모든 값을 삭제
         document.write(sub.size + "<br>"); // 0
 
     </script>
