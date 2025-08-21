@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var sub = new Set();
+        sub.add("a");
+        sub.add("b");
+        sub.add("c");
+        sub.add('a');
+
+        document.write(sub.size + "<br>");
+        document.write(sub.has('c') + "<br>");
+
+        for (var value of sub.values()) {
+            document.write(value + "<br>"); // a b c
+        };
+        sub.delete('a');
+        document.write(sub.has('a') + "<br>"); //false
+        sub.clear();
+        document.write(sub.size + "<br>"); // 0
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

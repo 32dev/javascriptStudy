@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+
+        // Map 구조 인스턴스 ( instance)를 생성
+        var sub = new Map();
+        //  ( key, value )
+        // html, css, javascript => 키
+        // 1, 2, 3 => 키(key)에 대한 값(value)
+        sub.set('html', 1);
+        sub.set('css', 2);
+        sub.set('javascript', 3);
+
+        document.write(sub.size + "<br>"); // 3
+
+        document.write(sub.get('html') + "<br>"); // 1 html 키에 대한 값을 가져온다
+        document.write(sub.has('css') + "<br>"); // true
+
+        document.write("-----------<br><br>");
+        // 반복문을 사용해서 key만 출력
+        for (var key of sub.keys()) {
+            // html, css, javascript 
+            document.write(key + "<br>");
+        }
+
+        document.write("+++++++++++++<br><br>");
+        // values() => 값만 가져온다
+        for (var key of sub.values()) {
+            // 1,2,3
+            document.write(key + "<br>");
+        }
+        document.write("************<br><br>")
+
+
+        // entries는 key, value 를 동시에 가져온다
+        for (var key of sub.entries()) {
+            document.write(key + "<br>");
+        }
+        document.write("//////////////<br><br>")
+
+        // delete 함수는 key를 삭제
+        sub.delete('html');
+        document.write(sub.has('html') + "<br>"); //false를 return
+
+        sub.clear(); //clear 함수는 모든 키를 삭제
+        document.write(sub.size); // 0
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
