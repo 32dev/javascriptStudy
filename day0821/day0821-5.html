@@ -6,28 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let sum = 0;
-        let result = "";
         /*
             반복문 for문을 사용하여 난수 5개를 발생시켜 화면에 출력하고 합계를 출력하세요
             (단, 난수는 1부터 500사이의 숫자임)
             발생된 난수 : X X X X X
-            난수 합계 : X
-        
+            난수 합계
         */
-        function getRandom() {
-            return Math.floor(Math.random() * 500) + 1;;
-        }
+        document.write("발생된 난수 : ");
+        let num, sum = 0;
         for (let i = 0; i < 5; i++) {
-            let num = getRandom();
-            result += `[ ${num} ]`;
-            sum = sum + num;
+            // 1부터 500사이의 난수를 발생시켜 변수에 대입
+            num = Math.floor(Math.random() * 500) + 1;
+            sum += num;
+            document.write(`${num} `);
         }
-        document.write(`발생된 난수 >>> ${result} <br>`);
-        document.write(`난수 합계 >>> ${sum} <br><br><br><br>`);
-        document.write(`[${getLotto()}]<br>`);
+        document.write(`<br> 난수 합계 : ${sum}`);
 
-        //연습
+
 
     </script>
 </head>

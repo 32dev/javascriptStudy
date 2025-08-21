@@ -6,22 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        /*
-            반복문 for문을 사용하여 난수 5개를 발생시켜 화면에 출력하고 합계를 출력하세요
-            (단, 난수는 1부터 500사이의 숫자임)
-            발생된 난수 : X X X X X
-            난수 합계
-        */
-        document.write("발생된 난수 : ");
-        let num, sum = 0;
-        for (let i = 0; i < 5; i++) {
-            // 1부터 500사이의 난수를 발생시켜 변수에 대입
-            num = Math.floor(Math.random() * 500) + 1;
-            sum += num;
-            document.write(`${num} `);
-        }
-        document.write(`<br> 난수 합계 : ${sum}`);
+        /* 정규표현식을 선언 */
+        // i ( ignore ) : 대소문자 구분안함
+        var reg = /Javascript/i;
 
+        // test 함수를 사용하여 특정 문자열이 정규 표현식에
+        // 부합하는지 체크를 하여 부합하면 true 아니면 false값을 출력
+        document.write(reg.test("Javascript ") + "<br>");
+        document.write(reg.test("script") + "<br>");
+        document.write(reg.test("javascript") + "<br>");
 
 
     </script>
