@@ -6,17 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>인라인 이벤트 모델</title>
     <script>
-        
         function sum(n) {
-            alert(n);
+            let totalSum = 0;
+            for (let i = 1; i <= n; i++) {
+                totalSum += i;
+            }
+
+
+            alert(`${totalSum.toLocaleString()}`);
+        }
+
+        function oddSum(n) {
+            let totalSum = 0;
+            for (let i = 1; i <= n; i += 2) {
+                totalSum += i;
+            }
+            alert(`${totalSum.toLocaleString()}`);
+        }
+        function evenSum(n) {
+            let totalSum = 0;
+            for (let i = 0; i <= n; i += 2) {
+                totalSum += i;
+            }
+            alert(`${totalSum.toLocaleString()}`);
         }
     </script>
 </head>
 
 <body>
-    <!-- onclick => 버튼을 클릭시 이벤트 발생 -->
-    <!-- 10 => 매개변수  -->
     <button onclick="sum(10);"> 클릭 </button>
+    <button onclick="oddSum(10);"> 홀수 합계 </button>
+    <button onclick="evenSum(10);"> 짝수 합계 </button>
 </body>
 
 </html>

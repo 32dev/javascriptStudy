@@ -13,22 +13,27 @@
             }
 
 
-            alert(`${totalSum.toLocaleString()}`);
+            alert(totalSum);
         }
 
-        function oddSum(n) {
+        function oddSum(num) {
             let totalSum = 0;
-            for (let i = 1; i <= n; i += 2) {
-                totalSum += i;
+            for (let i = 0; i < num; i++) {
+                if (i % 2 == 1) {
+                    totalSum += i;
+                }
             }
-            alert(`${totalSum.toLocaleString()}`);
+            alert(`홀수합 : ${totalSum.toLocaleString()}`);
         }
-        function evenSum(n) {
+
+        function evenSum(num) {
             let totalSum = 0;
-            for (let i = 0; i <= n; i += 2) {
-                totalSum += i;
+            for (let i = 0; i < num; i++) {
+                if (i % 2 == 0) {
+                    totalSum += i;
+                }
             }
-            alert(`${totalSum.toLocaleString()}`);
+            alert(`짝수합 : ${totalSum.toLocaleString()}`);
         }
     </script>
 </head>
