@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script>
+        // 프로그래밍을 하기 위한 설계도 => class
+        class Rectangle {
+            constructor(width, height) {
+                //매개변수를 속성에 대입
+                this.width = width;
+                this.height = height;
+            }
+            // 면적을 구하는 함수
+            getArea() {
+                return this.width * this.height;
+            }
+        }
+        // new는 Heap 메모리에 instance를 생성
+        let rectangle = new Rectangle(10, 20);
+        document.write(`가로 ${rectangle.width}, 세로 ${rectangle.height}인
+         사각형의 면적은 ${rectangle.getArea().toLocaleString()} 입니다.`);
+    </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

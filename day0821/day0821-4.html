@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 객체</title>
+    <script>
+        var luckyNumber = [];
+        var num = 0;
+
+        // 100번 반복
+        for (var i = 1; i <= 100; i++) {
+            // push는 배열에 i 변수 값을 대입
+            luckyNumber.push(i);
+        }
+        // Math.random() => 0 이상 1미만 숫자가 발생
+        // 0<= 난수 < 1
+        // 0 ~ 0.999999999999999
+        // luckNumber => 100
+        // Math.floor => 소숫점 버림
+        // 0<= 난수 <= 99
+        num = Math.floor(Math.random() * luckyNumber.length);
+        // document.write(luckyNumber.toString());
+        document.write('오늘 행운의 당첨번호는 ' + luckyNumber[num] + '입니다.');
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
