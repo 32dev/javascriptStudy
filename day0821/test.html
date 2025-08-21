@@ -4,29 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기본 이벤트 모델</title>
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+        }
+
+        table {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+        }
+
+        caption {
+            color: black;
+            border-left: 3px solid black;
+            border-top: 3px solid black;
+            border-right: 3px solid black;
+            background-color: aquamarine;
+        }
+
+        table,
+        caption {
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 300px;
+            border: 3px solid black;
+        }
+
+
+
+        th {
+            border-right: 3px solid black;
+            text-align: center;
+        }
+
+        tr:nth-child(1)>th,
+        tr:nth-child(2)>th,
+        tr:nth-child(3)>th {
+            border-bottom: 3px solid black;
+        }
+
+        tr:nth-child(3)>td {
+            border-bottom: 3px solid black;
+        }
+
+
+        td>input[type='text'] {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: 0;
+            text-align: right;
+            border-bottom: 1px solid lightgray;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            margin: 0;
+            padding: 0;
+            width: 45%;
+            height: 100%;
+            outline: none;
+            border: 0;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+        }
+    </style>
     <script>
-        // html이 모두 실행 후 동작 
-        // 익명 함수 => 이름이 없는 함수
+        function check() {
+            if (!frm.kor.value) {
+                alert('올바르지 않은 국어 점수입니다. 다시 입력해 주세요');
+                return false;
+            }
+            if (!frm.eng.value) {
+                alert('올바르지 않은 영어 점수입니다. 다시 입력해 주세요');
+                return false;
+            }
+            if (!frm.math.value) {
+                alert('올바르지 않은 수학 점수입니다. 다시 입력해 주세요');
+                return false;
+            }
+            return true;
+        }
+        function sum() {
+            let kor = Number(frm.kor.value);
+            let eng = Number(frm.eng.value);
+            let math = Number(frm.math.value);
+            return kor + math + eng;
+        }
         window.onload = function () {
-            // 첫 번째 버튼의 모든 정보를 변수에 대입
-            var bt = document.getElementById('bt');
-            // 첫 번째 버튼이 클릭되었을 때 
-            bt.onclick = function () {
-                alert('ok');
+            let btnSum = document.getElementById("btnSum");
+            let btnAvg = document.getElementById("btnAvg");
+            btnSum.onclick = function () {
+                if (!check()) {
+                    return;
+                }
+                alert(`총점 : ${sum()}`);
             }
-            var bt2 = document.getElementById('bt2');
-            bt2.onclick = function () {
-                alert('yes');
+            btnAvg.onclick = function () {
+                if (!check()) {
+                    return;
+                }
+                alert(`평균 : ${(sum() / 3).toFixed(2)}`);
             }
-        };
+        }
     </script>
 </head>
 
 <body>
-    <!-- id는 구분을 하기 위한 것으로 이름이 중복되면 안됨 -->
-    <button id="bt">클릭</button>
-    <button id="bt2">클릭</button>
+    <form id="frm" action="#" method="get">
+        <table>
+            <caption>
+                <h3>학생 성적</h3>
+            </caption>
+            <tr>
+                <th>국어</th>
+                <td><input type="text" id="kor" placeholder="국어 점수 입력"></td>
+            </tr>
+            <tr>
+                <th>영어</th>
+                <td><input type="text" id="eng" placeholder="영어 점수 입력"></td>
+            </tr>
+            <tr>
+                <th>수학</th>
+                <td><input type="text" id="math" placeholder="수학 점수 입력"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" id="btnSum">총점계산</button>
+                    <button type="button" id="btnAvg">평균계산</button>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 
 </html>
