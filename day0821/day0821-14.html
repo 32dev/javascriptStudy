@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    </style>
+    <script>
+        function sum() {
+            let kor = Number(frm.kor.value);
+            let eng = Number(frm.eng.value);
+            let math = Number(frm.math.value);
+            return kor + math + eng;
+        }
+        window.onload = function () {
+            let btnSum = document.getElementById("btnSum");
+            let btnAvg = document.getElementById("btnAvg");
+            btnSum.onclick = function () {
+                alert(`총점 : ${sum()}`);
+            }
+            btnAvg.onclick = function () {
+                alert(`평균 : ${(sum() / 3).toFixed(2)}`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="frm" action="#" method="get">
+        <table>
+            <caption>
+                <h1>학생 성적</h1>
+            </caption>
+            <tr>
+                <th>국어</th>
+                <td><input type="text" id="kor" placeholder="국어 점수 입력"></td>
+            </tr>
+            <tr>
+                <th>영어</th>
+                <td><input type="text" id="eng" placeholder="영어 점수 입력"></td>
+            </tr>
+            <tr>
+                <th>수학</th>
+                <td><input type="text" id="math" placeholder="수학 점수 입력"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" id="btnSum">총점</button>
+                    <button type="button" id="btnAvg">평균</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
