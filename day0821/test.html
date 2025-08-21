@@ -4,17 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <script>
-        /* 정규표현식을 선언 */
-        // i ( ignore ) : 대소문자 구분안함
-        var reg = /Javascript/i;
+        var sub = new Map();
+        sub.set('html', 1);
+        sub.set('css', 2);
+        sub.set('javascript', 3);
 
-        // test 함수를 사용하여 특정 문자열이 정규 표현식에
-        // 부합하는지 체크를 하여 부합하면 true 아니면 false값을 출력
-        document.write(reg.test("Javascript ") + "<br>");
-        document.write(reg.test("script") + "<br>");
-        document.write(reg.test("javascript") + "<br>");
+        document.write(sub.size + "<br>");
+        document.write(sub.get('html') + "<br>");
+        document.write(sub.has('css') + "<br>");
+
+        for (var key of sub.keys()) {
+            document.write(key + "<br>");
+
+        }
+        document.write("-----------<br>");
+        for (var key of sub.values()) {
+            document.write(key + "<br>");
+        }
+        document.write("-----------<br>")
+
+        for (var key of sub.entries()) {
+            document.write(key + "<br>");
+        }
+        document.write("-----------<br>")
+        sub.delete('html');
+        document.write(sub.has('html')+"<br>");
+
+        sub.clear();
+        document.write(sub.size);
+
+
 
 
     </script>

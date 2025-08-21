@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 정규표현식을 선언 */
+        // i ( ignore ) : 대소문자 구분안함
+        var reg = /Javascript/i;
+
+        // test 함수를 사용하여 특정 문자열이 정규 표현식에
+        // 부합하는지 체크를 하여 부합하면 true 아니면 false값을 출력
+        document.write(reg.test("Javascript ") + "<br>");
+        document.write(reg.test("script") + "<br>");
+        document.write(reg.test("javascript") + "<br><br>");
+
+        //첫 번째 a문자를 검색
+        var reg1 = /a/;
+        //모든 a문자를 검색
+        var reg2 = /a/g;
+        var str = 'javascript';
+
+        // str 변수값이 reg1 정규표현식에 부합하면 값을 출력함
+        console.log(str.match(reg1));
+
+        // global 옵션이 적용되어 모든 a 문자열을 찾는다
+        console.log(str.match(reg2));
+
+
+        console.log("-----------------▼");
+
+        // s문자로 시작하는지 체크
+        var reg1 = /^s/;
+
+        // m(=multiline)은 여러줄에서 
+        // s로 시작하는게 있는지 체크
+        var reg2 = /^s/m;
+
+        var str = "javascript\nscript";
+        console.log(str.match(reg1));
+        console.log(str.match(reg2));
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
