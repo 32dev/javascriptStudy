@@ -4,11 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>표준 이벤트 모델</title>
+    <script>
+        window.onload = function () {
+
+            // 첫번째 버튼의 정보를 변수에 대입
+            var bt = document.getElementById('bt');
+            var bt2 = document.getElementById('bt2');
+            function view() {
+                alert('ok');
+            }
+            // addEventListener ? 
+            // view는 view함수를 실행, () 추가 x
+            bt.addEventListener('click', view);
+            bt2.addEventListener('click', view);
+        }
+    </script>
 </head>
 
 <body>
-
+    <button id="bt">
+        클릭
+    </button>
+    <button id="bt2">
+        클릭 2
+    </button>
 </body>
 
 </html>
+<m
