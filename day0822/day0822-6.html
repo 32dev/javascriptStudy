@@ -9,10 +9,12 @@
         window.onload = function () {
             var bt = document.getElementById('bt');
             var i = 0;
+            // setInterval => 일정 시간마다 함수 실행
             var increase = setInterval(function () {
                 i++;
-                alert(i);
-            }, 2000)
+                let result = document.getElementById("result");
+                result.innerHTML = `Counter : <span style="color:blue;">${i}</span>`;
+            }, 2000);
 
             bt.onclick = function () {
                 clearInterval(increase);
@@ -23,6 +25,9 @@
 
 <body>
     <button id="bt">멈춤</button>
+    <p id="result">
+
+    </p>
 </body>
 
 </html>
