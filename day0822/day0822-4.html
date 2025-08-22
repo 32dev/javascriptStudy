@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 버블링 방지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            background: #ff0000;
+            padding: 20px;
+        }
+
+        #inner {
+            background: #00ff00;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var outer = document.getElementById('outer');
+            var inner = document.getElementById('inner');
+            outer.onclick = function () {
+                alert('부모 이벤트');
+            }
+            inner.onclick = function () {
+                alert('자식 이벤트');
+                event.stopPropagation();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <p id="inner">클릭</p>
+    </div>
+</body>
+
+</html>
+<!--
+    http://192.168.0.61:5500/javascriptStudy/day0822/day0822-4.html
+-->

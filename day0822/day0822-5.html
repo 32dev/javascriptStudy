@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open 메서드</title>
+    <script>
+        window.onload = function () {
+            var bt = document.getElementById('bt');
+            bt.onclick = function () {
+                window.open('http://icoxpublish.com', 'icox', 'width=300, height=300, left=100, top=10');
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <button id="bt">
+        새창 열기
+    </button>
+</body>
+
+</html>
+
+<!--
+    http://192.168.0.61:5500/javascriptStudy/day0822/day0822-5.html
+-->

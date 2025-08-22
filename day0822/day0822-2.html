@@ -4,29 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day0822-2.html</title>
+    <title>삼각형 면적구하기</title>
     <script>
-
         window.onload = function () {
-            var bt = document.getElementById('bt');
-            function calculate() {
-                let w = Number(document.getElementById("w").value);
-                let h = Number(document.getElementById("h").value);
+            let calBtn = document.getElementById("calBtn");
+            calBtn.addEventListener('click', function () {
+                let base = Number(frm.base.value);
+                let height = Number(frm.height.value);
+                if (!base) {
+                    alert('밑변을 입력하세요');
+                    return;
+                }
+                if (!height) {
+                    alert('높이를 입력하세요');
+                    return;
+                }
+                let area = base * height * 0.5;
+                let result = document.getElementById("result");
+                result.textContent = `삼각형 면적: ${area.toFixed(1)}`;
+            });
+        };
 
-                let result = (w * h * 0.5).toFixed(1);
-                alert(`삼각형 면적 : ${result}`);
-            }
-            bt.addEventListener('click', calculate);
-
-
-        }
     </script>
 </head>
 
 <body>
-    밑변(w) : <input type="text" id="w" value="" /> <br>
-    높이(h) : <input type="text" id="h" value="" /><br>
-    <input type="button" id="bt" value="계산" />
+    <h3>삼각형 면적</h3>
+    <!-- 데이터를 입력받아서 서버로 전송하는 태그 -->
+    <!-- action은 submit이 동작시 이동하는 페이지-->
+    <form action="#" method="get" name="frm">
+        <p>밑변: <input type="text" name="base"> </p>
+        <p>높이: <input type="text" name="height"> </p>
+        <p>
+            <input type="button" id="calBtn" value="계산">
+        </p>
+        <p id="result">
+
+        </p>
+    </form>
 </body>
 
 </html>
+<!-- http://192.168.0.61:5500/javascriptStudy/day0822/day0822-2.html -->
