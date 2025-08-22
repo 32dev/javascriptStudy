@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navigator 객체</title>
     <script>
+        // 현재 사용중인 웹 브라우저의 정보를 가져온다.
         var browser = navigator.userAgent;
-        alert(browser);
+        
+        // alert(browser);  
         var browserName = '';
-        if (browser.match(/Trident/)) {
-            browserName = '인터넷 익스플러';
+        if (browser.match(/Edg/)) {
+            browserName = 'Edge';
         } else if (browser.match(/Chrome/)) {
             browserName = '크롬';
         } else if (browser.match(/FireFox/)) {

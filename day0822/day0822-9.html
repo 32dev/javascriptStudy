@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>423.p / day0822-9.html / ex3-48</title>
+    <script>
+        window.onload = function () {
+
+            // quwertySelector ?
+            // html에서 특정 요소 (element)를 찾는데 
+            // 첫번째 요소를 찾는다.
+
+            // 자식 선택자 > 
+            var list1 = document.querySelector('#box1 > ul > li');
+            var list2 = document.querySelectorAll('#box2 > ul > li');
+            console.log(list1);
+            console.log(list2);
+            // list1.style.background = "#ff6600"; //orange
+
+            // list2[0].style.background = "yellow"; //진한회색
+            // list2[1].style.background = "yellow"; //진한회색
+            // list2[2].style.background = "yellow"; //진한회색
+
+            list2.forEach(function (item) {
+                item.style.background = 'yellow';
+            });
+
+            // list2.item(1).style.background = "#ddd";//연한회색
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box1">
+        <ul>
+            <li>내용 1</li>
+            <li>내용 2</li>
+            <li>내용 3</li>
+        </ul>
+    </div>
+    <div id="box2">
+        <ul>
+            <li>내용 4</li>
+            <li>내용 5</li>
+            <li>내용 6</li>
+        </ul>
+    </div>
+    <!--
+        http://192.168.0.61:5500/javascriptStudy/day0822/day0822-9.html
+    -->
+</body>
+
+</html>
