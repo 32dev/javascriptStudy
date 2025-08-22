@@ -7,9 +7,31 @@
     <title>open 메서드</title>
     <script>
         window.onload = function () {
+
             var bt = document.getElementById('bt');
+            // 버튼이 클릭시 처리
+
+
+
+
             bt.onclick = function () {
-                window.open('http://icoxpublish.com', 'icox', 'width=300, height=300, left=100, top=10');
+                // 팝업 윈도우 가로길이
+                var popupWidth = 500;
+
+                // 팝업 윈도우 세로길이
+                var popupHeight = 500;
+
+
+                var left = (screen.width - popupWidth) / 2;
+                var top = (screen.height - popupHeight) / 2;
+
+
+                // 새로운 창을 open
+                window.open(
+                    'http://icoxpublish.com',
+                    'icox',
+                    `width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`
+                );
             };
         };
     </script>
