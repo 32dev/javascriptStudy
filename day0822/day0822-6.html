@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearInterval 메서드</title>
+    <script>
+        window.onload = function () {
+            var bt = document.getElementById('bt');
+            var i = 0;
+            var increase = setInterval(function () {
+                i++;
+                alert(i);
+            }, 2000)
+
+            bt.onclick = function () {
+                clearInterval(increase);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="bt">멈춤</button>
+</body>
+
+</html>
+<!--
+    http://192.168.0.61:5500/javascriptStudy/day0822/day0822-6.html
+-->
