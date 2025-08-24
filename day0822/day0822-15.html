@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = function(){
+
+            var frm = document.frm;
+
+            //오늘날짜 가져온다
+            var date = new Date();
+
+            //년도만 추출
+            var year = date.getFullYear();
+
+            for(var i=1970;i<=year;i++){
+                //option 태그를 반복문을 사용하여
+                //생성
+                //new Option(화면출력텍스트,서버로 전송되는값)
+                frm.year.add(new Option(i + "년",i));
+            }
+
+            //월도 option 태그를 자동으로 생성
+            for(var i=1;i<=12;i++){
+                frm.month.add(new Option(i + "월",i));
+            }
+            
+        };
+    </script>
+</head>
+<body>
+    <form name="frm" action="#">
+        <select name="year">
+            <!-- value는 서버로 전송되는 값 -->
+            <option value="#">년도선택</option>
+
+        </select>
+        <select name="month">
+            <option value="#">월선택</option>
+        </select>
+        <select name="sub">
+            <option value="#">과목선택</option>
+            <option value="#">html</option>
+            <option value="#">css</option>
+            <option value="#">javascript</option>
+        </select>
+    </form>
+</body>
+</html>

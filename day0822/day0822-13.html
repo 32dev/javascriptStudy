@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //자바스크립트로 스타일 지정
+        window.onload = function(){
+            
+            var content = document.getElementById("content");
+
+            //가로길이 스타일
+            content.style.width = "200px";
+            //세로길이 스타일
+            content.style.height = "200px";
+
+            //4px => 선굵기,선의종류,#718c00=> 색상
+            content.style.border = "10px dotted blue";
+            //글자 중앙 정렬
+            content.style.textAlign = "center";
+
+            //줄간격
+            content.style.lineHeight = "200px";
+        };
+    </script>
+</head>
+<body>
+    <div id="content">내용</div>    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery 최신버전을 연결 -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+       $(document).ready(function(){
+         //class="btn"으로 선언된 버튼이
+         //클릭된 경우 실행
+         $(".btn").click(function(){
+            //this는 클릭된 버튼을 가리킨다
+            //text() => 버튼이름을 가져온다
+            let btnText = $(this).text();
+
+            alert(btnText +"을 클릭");
+            
+         });
+       });
+    </script>    
+</head>
+<body>
+    <button class="btn">버튼1</button>
+    <button class="btn">버튼2</button>
+    <button class="btn">버튼3</button>
+</body>
+</html>
